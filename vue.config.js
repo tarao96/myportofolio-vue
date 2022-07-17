@@ -4,5 +4,6 @@ module.exports = defineConfig({
     'vuetify'
   ],
   outputDir: 'docs',
+  assetsDir: './src',
   publicPath: './',
 })
