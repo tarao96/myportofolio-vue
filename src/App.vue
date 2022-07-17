@@ -90,27 +90,27 @@ export default {
       var servicesLocate = $('#services_locate').offset().top;
 
       $('#profile_nav').click(function() {
-          $(window).scrollTop(profileLocate - 150);
+          $(window).scrollTop(profileLocate);
       });
 
       $('#work_nav').click(function() {
-          $(window).scrollTop(workLocate - 150);
+          $(window).scrollTop(workLocate);
       });
 
       $('#background_nav').click(function() {
-          $(window).scrollTop(backgroundLocate - 150);
+          $(window).scrollTop(backgroundLocate);
       });
 
       $('#likes_nav').click(function() {
-          $(window).scrollTop(likesLocate - 150);
+          $(window).scrollTop(likesLocate);
       });
 
       $('#skill_nav').click(function() {
-          $(window).scrollTop(skillLocate - 150);
+          $(window).scrollTop(skillLocate);
       });
 
       $('#portofolio_nav').click(function() {
-          $(window).scrollTop(portofolioLocate - 150);
+          $(window).scrollTop(portofolioLocate);
       });
 
       $('#services_nav').click(function() {
