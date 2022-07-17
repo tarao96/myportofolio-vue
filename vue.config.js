@@ -5,5 +5,7 @@ module.exports = defineConfig({
   ],
   outputDir: 'docs',
   assetsDir: './src',
-  publicPath: './',
+  publicPath: process.env.NODE_ENV === 'production'
+  ? '/myportofolio-vue/'   //任意
+  : '/',
 })

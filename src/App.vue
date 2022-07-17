@@ -47,7 +47,7 @@
           <v-btn id="skill_nav" text>Skill</v-btn>
           <v-btn id="portofolio_nav" text>Portofolio</v-btn>
           <v-btn id="services_nav" text>Service</v-btn>
-          <v-btn href="https://tarao96.github.io/myportofolio-vue/" text>Source</v-btn>
+          <v-btn href="https://github.com/tarao96/myportofolio-vue" text>Source</v-btn>
       </v-toolbar-items>
     </v-app-bar>
     <v-main class="brown lighten-5">
