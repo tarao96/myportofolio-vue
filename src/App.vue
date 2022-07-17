@@ -73,10 +73,10 @@ export default {
         ],
         nav_lists: [
           {name: 'Profile', icon: 'mdi-vuetify'},
-          {name: 'Skill', icon: 'mdi-cogs', lists: ['HTML', 'CSS', 'JavaScript', 'PHP', 'Laravel', 'Vue.js', 'Nuxt.js', 'Sass', 'jQuery', 'Bootstrap', 'Vuetify', 'WordPress']},
-          {name: 'Work', icon: 'mdi-palette', lists: ['iSara', 'Lancers', 'LIKSON']},
-          {name: 'Service', icon: 'mdi-view-dashboard', lists: ['Coding', 'WordPress', 'Web Development']},
-          {name: 'Contact', icon: 'mdi-function'},
+          {name: 'Skill', icon: 'mdi-remote-desktop', lists: ['HTML', 'CSS', 'JavaScript', 'PHP', 'Laravel', 'Vue.js', 'Nuxt.js', 'Sass', 'jQuery', 'Bootstrap', 'Vuetify', 'WordPress']},
+          {name: 'Work', icon: 'mdi-briefcase', lists: ['iSara', 'Lancers', 'LIKSON']},
+          {name: 'Service', icon: 'mdi-account-wrench', lists: ['Coding', 'WordPress', 'Web Development']},
+          {name: 'Source', icon: 'mdi-github'},
         ]
       }
     },
