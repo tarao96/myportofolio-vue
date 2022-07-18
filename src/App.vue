@@ -97,13 +97,13 @@
       <v-toolbar-title>Potofolio Site</v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items class="navbar-item">
-          <v-btn id="profile_nav" text>Profile</v-btn>
-          <v-btn id="work_nav" text>Work</v-btn>
-          <v-btn id="background_nav" text>Background</v-btn>
-          <v-btn id="likes_nav" text>Likes</v-btn>
-          <v-btn id="skill_nav" text>Skill</v-btn>
-          <v-btn id="portofolio_nav" text>Portofolio</v-btn>
-          <v-btn id="services_nav" text>Service</v-btn>
+          <v-btn @click="scrollProfile()" text>Profile</v-btn>
+          <v-btn @click="scrollWork()" text>Work</v-btn>
+          <v-btn @click="scrollBackground()" text>Background</v-btn>
+          <v-btn @click="scrollLikes()" text>Likes</v-btn>
+          <v-btn @click="scrollSkill()" text>Skill</v-btn>
+          <v-btn @click="scrollPortofolio()" text>Portofolio</v-btn>
+          <v-btn @click="scrollServices()" text>Service</v-btn>
           <v-btn href="https://github.com/tarao96/myportofolio-vue" text>Source</v-btn>
       </v-toolbar-items>
     </v-app-bar>
@@ -143,72 +143,50 @@ export default {
         window.location.href = url
       },
       scrollProfile: function() {
-          var profileLocate = $('#profile_locate').offset().top;
-          $(window).scrollTop(profileLocate - 150);
+          let profileLocate = document.getElementById('profile_locate');
+          let rect = profileLocate.getBoundingClientRect();
+          let elemtop = rect.top + window.pageYOffset - 100;
+          document.documentElement.scrollTop = elemtop;
       },
       scrollWork: function() {
-        var workLocate = $('#work_locate').offset().top;
-        $(window).scrollTop(workLocate - 150);
+        let profileLocate = document.getElementById('work_locate');
+        let rect = profileLocate.getBoundingClientRect();
+        let elemtop = rect.top + window.pageYOffset - 100;
+        document.documentElement.scrollTop = elemtop;
       },
       scrollBackground: function() {
-        var backgroundLocate = $('#background_locate').offset().top;
-        $(window).scrollTop(backgroundLocate - 150);
+        let profileLocate = document.getElementById('background_locate');
+        let rect = profileLocate.getBoundingClientRect();
+        let elemtop = rect.top + window.pageYOffset - 100;
+        document.documentElement.scrollTop = elemtop;
       },
       scrollLikes: function() {
-        var likesLocate = $('#likes_locate').offset().top;
-        $(window).scrollTop(likesLocate - 150);
+        let profileLocate = document.getElementById('likes_locate');
+        let rect = profileLocate.getBoundingClientRect();
+        let elemtop = rect.top + window.pageYOffset - 100;
+        document.documentElement.scrollTop = elemtop;
       },
       scrollSkill: function() {
-        var skillLocate = $('#skill_locate').offset().top;
-        $(window).scrollTop(skillLocate - 150);
+        let profileLocate = document.getElementById('skill_locate');
+        let rect = profileLocate.getBoundingClientRect();
+        let elemtop = rect.top + window.pageYOffset - 100;
+        document.documentElement.scrollTop = elemtop;
       },
       scrollPortofolio: function() {
-        var portofolioLocate = $('#portofolio_locate').offset().top;
-        $(window).scrollTop(portofolioLocate - 150);
+        let profileLocate = document.getElementById('portofolio_locate');
+        let rect = profileLocate.getBoundingClientRect();
+        let elemtop = rect.top + window.pageYOffset - 100;
+        document.documentElement.scrollTop = elemtop;
       },
       scrollServices: function() {
-        var servicesLocate = $('#services_locate').offset().top;
-        $(window).scrollTop(servicesLocate);
+        let profileLocate = document.getElementById('services_locate');
+        let rect = profileLocate.getBoundingClientRect();
+        let elemtop = rect.top + window.pageYOffset - 100;
+        document.documentElement.scrollTop = elemtop;
       }
     },
 
     mounted: function() {
-      var profileLocate = $('#profile_locate').offset().top;
-      var workLocate = $('#work_locate').offset().top;
-      var backgroundLocate = $('#background_locate').offset().top;
-      var likesLocate = $('#likes_locate').offset().top;
-      var skillLocate = $('#skill_locate').offset().top;
-      var portofolioLocate = $('#portofolio_locate').offset().top;
-      var servicesLocate = $('#services_locate').offset().top;
-
-      $('#profile_nav').click(function() {
-          $(window).scrollTop(profileLocate - 150);
-      });
-
-      $('#work_nav').click(function() {
-          $(window).scrollTop(workLocate - 150);
-      });
-
-      $('#background_nav').click(function() {
-          $(window).scrollTop(backgroundLocate - 150);
-      });
-
-      $('#likes_nav').click(function() {
-          $(window).scrollTop(likesLocate - 150);
-      });
-
-      $('#skill_nav').click(function() {
-          $(window).scrollTop(skillLocate - 150);
-      });
-
-      $('#portofolio_nav').click(function() {
-          $(window).scrollTop(portofolioLocate - 150);
-      });
-
-      $('#services_nav').click(function() {
-          $(window).scrollTop(servicesLocate);
-      });
-
       $('#portofolio-top').click(function() {
                 $('body, html').animate({
                     scrollTop: 0
