@@ -87,6 +87,15 @@
                 <v-list-item-title @click="moveGithub()" class="list-item">Source</v-list-item-title>
               </v-list-item-content>
             </v-list-item>
+
+            <v-list-item>
+              <v-list-item-icon>
+                <v-switch
+                  v-model="theme"
+                  :prepend-icon="themeIcon"
+                ></v-switch>
+              </v-list-item-icon>
+            </v-list-item>
         </v-list>
       </v-container>
     </v-navigation-drawer>
@@ -105,6 +114,11 @@
           <v-btn @click="scrollPortofolio()" text>Portofolio</v-btn>
           <v-btn @click="scrollServices()" text>Service</v-btn>
           <v-btn href="https://github.com/tarao96/myportofolio-vue" text>Source</v-btn>
+          <v-switch
+                  v-model="theme"
+                  :prepend-icon="themeIcon"
+                  class="mt-5"
+          ></v-switch>
       </v-toolbar-items>
     </v-app-bar>
     <v-main class="brown lighten-5">
@@ -123,6 +137,7 @@ export default {
     data() {
       return {
         drawer: null,
+        theme: true,
       }
     },
     methods: {
@@ -184,6 +199,18 @@ export default {
         let elemtop = rect.top + window.pageYOffset - 100;
         document.documentElement.scrollTop = elemtop;
       }
+    },
+
+    computed: {
+    themeIcon() {
+      return this.theme ? 'mdi-weather-night' : 'mdi-weather-sunny'
+    }
+    },
+
+    watch: {
+    theme() {
+      this.$vuetify.theme.dark = this.theme
+    }
     },
 
     mounted: function() {
